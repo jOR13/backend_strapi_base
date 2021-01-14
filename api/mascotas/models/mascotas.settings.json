@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mascotas",
+  "info": {
+    "name": "mascotas",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "tipo": {
+      "type": "string",
+      "required": true
+    },
+    "raza": {
+      "type": "string"
+    },
+    "direccion": {
+      "type": "text"
+    },
+    "descripcion": {
+      "type": "text"
+    },
+    "contacto": {
+      "type": "string",
+      "required": true
+    },
+    "photo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "amo": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "mascotas"
+    },
+    "qr_device": {
+      "via": "idMascota",
+      "model": "qr-device"
+    }
+  }
+}

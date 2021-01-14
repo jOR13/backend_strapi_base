@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "qr_devices",
+  "info": {
+    "name": "qr_device",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "status": {
+      "type": "boolean",
+      "default": false
+    },
+    "idUser": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "qr_devices"
+    },
+    "idMascota": {
+      "model": "mascotas",
+      "via": "qr_device"
+    },
+    "latitude": {
+      "type": "float"
+    },
+    "longitude": {
+      "type": "float"
+    },
+    "lastScan": {
+      "type": "string"
+    },
+    "alerta": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

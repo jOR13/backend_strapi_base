@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/qr-devices",
+      "handler": "qr-device.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/qr-devices/count",
+      "handler": "qr-device.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/qr-devices/:id",
+      "handler": "qr-device.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/qr-devices",
+      "handler": "qr-device.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/qr-devices/:id",
+      "handler": "qr-device.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/qr-devices/:id",
+      "handler": "qr-device.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
